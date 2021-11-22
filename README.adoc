@@ -6,10 +6,21 @@
 I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the following changes
 ====
 
-== Project Setup
-====
-. Clone the repo
-. mvn clean package
-.
-====
 
+
+== Changes
+[cols="50,50"]
+|===
+|K8's version 
+|1.22.3
+
+|IP Address Range
+|192.168.59.0/24
+
+|kube-apiserver.service
+|--service-account-issuer=api \
+--service-account-signing-key-file=/var/lib/kubernetes/service-account.key \
+
+
+
+|===
