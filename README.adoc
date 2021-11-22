@@ -18,7 +18,7 @@ I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the
 |192.168.59.0/24
 
 |kube-apiserver.service
-|--service-account-issuer=api \
+|--service-account-issuer=api \ +
 --service-account-signing-key-file=/var/lib/kubernetes/service-account.key \
 
 
