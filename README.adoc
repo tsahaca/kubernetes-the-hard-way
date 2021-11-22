@@ -21,6 +21,14 @@ I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the
 |--service-account-issuer=api \ +
 --service-account-signing-key-file=/var/lib/kubernetes/service-account.key \
 
+|kube-controller-manager.service
+|--feature-gates=RotateKubeletServerCertificate=true
+
+|Worker nodes
+| install conntrack +
+sudo apt update +
+sudo apt install conntrack
+
 
 
 |===
