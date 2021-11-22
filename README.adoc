@@ -14,7 +14,7 @@ git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_proj
 
 
 == Changes
-[cols="50,50"]
+[cols="50,50,50"]
 |===
 |Cluster
 |K8's version 
