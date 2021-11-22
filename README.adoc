@@ -5,8 +5,8 @@
 ====
 I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the following changes
 ====
-
 == VS Code Github settings
+[Command] 
 ====
 git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_project.git
 ====
@@ -16,22 +16,26 @@ git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_proj
 == Changes
 [cols="50,50"]
 |===
+|Cluster
 |K8's version 
 |1.22.3
 
+|Cluster
 |IP Address Range
 |192.168.59.0/24
 
+|master nodes
 |kube-apiserver.service
 |--service-account-issuer=api \ +
 --service-account-signing-key-file=/var/lib/kubernetes/service-account.key \
 
+|master nodes
 |kube-controller-manager.service
 |--feature-gates=RotateKubeletServerCertificate=true
 
-|Worker nodes
-| install conntrack +
-sudo apt update +
+|worker nodes
+|install conntrack
+|sudo apt update +
 sudo apt install conntrack
 
 
