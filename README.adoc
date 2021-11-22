@@ -1,0 +1,15 @@
+= Kubernetes The Hard Way On VirtualBox
+
+== Introduction
+[NOTE]
+====
+I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the following changes
+====
+
+== Project Setup
+====
+. Clone the repo
+. mvn clean package
+.
+====
+
