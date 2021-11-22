@@ -38,6 +38,9 @@ git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_proj
 |sudo apt update +
 sudo apt install conntrack
 
+|worker-2
+|kubelet.service
+|--rotate-server-certificates=true 
 
 
 |===
