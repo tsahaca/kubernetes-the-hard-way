@@ -77,5 +77,13 @@ data:
 * helm repo update
 * helm repo list
 * Must show the following +
-NAME                	URL +                                      
-ingress-nginx       	https://kubernetes.github.io/ingress-nginx
+
+[cols="1,1"]
+|===
+
+|NAME |URL                                       
+
+|ingress-nginx       	
+|https://kubernetes.github.io/ingress-nginx
+
+|===
