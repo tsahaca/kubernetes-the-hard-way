@@ -103,7 +103,7 @@ data:
 
 |558
 |enabled: true -> enabled: false
-|disable the 556   admissionWebhooks
+|disable the admissionWebhooks
 
 |===
 
