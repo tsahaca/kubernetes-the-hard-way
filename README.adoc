@@ -7,8 +7,8 @@ I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the
 ====
 
 == Environment 
-MacOS Montery 12.0.1
-VirtualBox 6.1.28
+* MacOS Montery 12.0.1
+* VirtualBox 6.1.28
 
 == VS Code Github settings
 [COMMAND] 
@@ -71,5 +71,11 @@ data:
 ----      
 
 == ingress-nginx controller installation by helm chart
-Must have helm 3 installed
-helm search repo  ingress
+* Must have helm 3 installed
+* helm search repo  ingress
+* helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+* helm repo update
+* helm repo list
+* Must show the following +
+NAME                	URL +                                      
+ingress-nginx       	https://kubernetes.github.io/ingress-nginx
