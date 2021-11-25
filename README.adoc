@@ -17,7 +17,7 @@ git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_proj
 ====
 
 == Changes
-[cols="50,50,50"]
+[cols="1,1,1"]
 |===
 |Cluster
 |K8's version 
@@ -87,3 +87,25 @@ data:
 |https://kubernetes.github.io/ingress-nginx
 
 |===
+
+* extract the default values into ingress-nginx.yaml
+* helm show values ingress-nginx/ingress-nginx > ingress-nginx.yaml
+* make the following changes in ingress-nginx.yaml file
+
+[cols="1,1,1"]
+|===
+
+|Line # |Changes |Comment
+
+|183
+|Deployment -> DaemonSet
+|
+
+|558
+|enabled: true -> enabled: false
+|disable the 556   admissionWebhooks
+
+|===
+
+* kubectl create ns ingress-nginx
+* helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx  --values ingress-nginx.yaml 
