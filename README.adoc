@@ -5,13 +5,16 @@
 ====
 I have followed https://github.com/mmumshad/kubernetes-the-hard-way and made the following changes
 ====
+
+== Environment 
+MacOS Montery 12.0.1
+VirtualBox 6.1.28
+
 == VS Code Github settings
-[Command] 
+[COMMAND] 
 ====
 git remote set-url origin https://YOUR_TOKEN_HERE@github.com/your_user/your_project.git
 ====
-
-
 
 == Changes
 [cols="50,50,50"]
@@ -41,6 +44,32 @@ sudo apt install conntrack
 |worker-2
 |kubelet.service
 |--rotate-server-certificates=true 
-
-
 |===
+
+== Metallb installation By manifest
+https://metallb.universe.tf/installation/
+
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/namespace.yaml
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.11.0/manifests/metallb.yaml
+
+[source,yaml]
+----
+
+Metallb ConfigMap 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - 192.168.59.200-192.168.19.240
+----      
+
+== ingress-nginx controller installation by helm chart
+Must have helm 3 installed
+helm search repo  ingress
