@@ -46,7 +46,7 @@ sudo apt install conntrack
 |--rotate-server-certificates=true 
 |===
 
-xref:MetalLB/README.adoc[MetalLb installation]
+xref:MetalLB[MetalLb installation]
 
 == MetalLb installation By manifest
 https://metallb.universe.tf/installation/
