@@ -46,45 +46,8 @@ sudo apt install conntrack
 |--rotate-server-certificates=true 
 |===
 
+== Install MetalLB
 xref:MetalLb/README.adoc[MetalLb installation]
 
-
-== ingress-nginx controller installation by helm chart
-* Must have helm 3 installed
-* helm search repo  ingress
-* helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-* helm repo update
-* helm repo list
-* Must show the following +
-
-[cols="1,1"]
-|===
-
-|NAME |URL                                       
-
-|ingress-nginx       	
-|https://kubernetes.github.io/ingress-nginx
-
-|===
-
-* extract the default values into ingress-nginx.yaml
-* helm show values ingress-nginx/ingress-nginx > ingress-nginx.yaml
-* make the following changes in ingress-nginx.yaml file
-
-[cols="1,1,1"]
-|===
-
-|Line # |Changes |Comment
-
-|183
-|Deployment -> DaemonSet
-|
-
-|558
-|enabled: true -> enabled: false
-|disable the admissionWebhooks
-
-|===
-
-* kubectl create ns ingress-nginx
-* helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx  --values ingress-nginx.yaml 
+== Install ingress-nginx controller
+xref:ingress/README.adoc[ingress-nginx controller installation]
