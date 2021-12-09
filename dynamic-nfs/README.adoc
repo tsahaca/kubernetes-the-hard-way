@@ -1,0 +1,21 @@
+
+== NFS Subdirectory External Provisioner Helm Chart
+
+. Choose a VM to install the NFS Server
+. sudo apt install nfs-kernel-server
+. create a folder for NFS Server to store data
+. sudo mkdir /srv/kubernetes/volume
+. change the ownership to nobody:nogroup
+. sudo chown -R nobody:nogroup /srv/kubernetes/
+. sudo chmod -R 777 /srv/kubernetes/
+. sudo vi /etc/exports
+. add the following line 
+/srv/kubernetes/   192.168.59.0/24(rw,no_root_squash)
+
+
+. https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md
+
+. helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+
+. helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner  --values nfs-provisioner-values.yaml
+
