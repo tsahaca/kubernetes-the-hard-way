@@ -9,7 +9,7 @@
 . sudo chown -R nobody:nogroup /srv/kubernetes/
 . sudo chmod -R 777 /srv/kubernetes/
 . sudo vi /etc/exports
-. add the following line 
+. add the following line +
 /srv/kubernetes/   192.168.59.0/24(rw,no_root_squash)
 
 

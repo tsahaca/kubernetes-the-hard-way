@@ -1,1 +1,0 @@
-# kubernetes-the-hard-way
