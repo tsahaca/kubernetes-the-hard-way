@@ -53,4 +53,4 @@ xref:MetalLb/README.adoc[MetalLb installation]
 xref:ingress/README.adoc[ingress-nginx controller installation]
 
 == Test ingress
-xref:ingress-test
+xref:ingress-test[Deploy Service with Ingress]
