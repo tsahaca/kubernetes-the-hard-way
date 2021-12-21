@@ -51,3 +51,9 @@ xref:MetalLb/README.adoc[MetalLb installation]
 
 == Install ingress-nginx controller
 xref:ingress/README.adoc[ingress-nginx controller installation]
+
+== Test ingress
+xref:ingress-test[Deploy Service with Ingress]
+
+== NFS Subdirectory External Provisioner
+xref:dynamic-nfs/README.adoc[Deploy NFS Subdirectory External Provisioner]
