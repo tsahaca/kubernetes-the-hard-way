@@ -16,6 +16,7 @@ configInline:
     - 172.42.42.200 - 172.42.42.220
 ----
 
+[start=4]
 . helm install metallb metallb/metallb -f metallb-values.yaml -n metallb-system --create-namespace
     
 
