@@ -16,8 +16,8 @@ sometimes due to NAT actual client IP is not sent to the server, so use *
 
 /srv/kubernetes/   *(rw,no_root_squash, no_subtree_check,insecure)
  
- [start=10]
- . Export the NFS Share directory
+[start=10]
+. Export the NFS Share directory
  
  sudo exportfs -a
  
