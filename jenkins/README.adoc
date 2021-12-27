@@ -1,4 +1,4 @@
-== Install Jenkins Uisng Helm
+== Install Jenkins Using Helm
 
 . helm repo add jenkinsci https://charts.jenkins.io
 . helm repo update
@@ -7,3 +7,6 @@ The helm charts in the Jenkins repo can be listed with the command:
 
 [start=3]
 . helm search repo jenkinsci
+. Edit the jenkins-values.yaml filr for you need. I am using ingress to access the Jenkins Admin UI
+. PVC must be created befor hand to enable persistence
+. helm install cd-jenkins -n jenkins --values jenkins-values.yaml jenkinsci/jenkins
