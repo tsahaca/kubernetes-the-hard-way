@@ -9,8 +9,17 @@
 . sudo chown -R nobody:nogroup /srv/kubernetes/
 . sudo chmod -R 777 /srv/kubernetes/
 . sudo vi /etc/exports
-. add the following line +
-/srv/kubernetes/   192.168.59.0/24(rw,no_root_squash)
+. add the following line (Grant NFS Share Access to Client Systems) +
+/srv/kubernetes/   192.168.59.0/24(rw,no_root_squash, no_subtree_check,insecure)
+
+sometimes due to NAT actual client IP is not sent to the server, so use *
+/srv/kubernetes/   *(rw,no_root_squash, no_subtree_check,insecure)
+ 
+ . Export the NFS Share directory
+ 
+ sudo exportfs -a
+ 
+ sudo systemctl restart nfs-kernel-server
 
 
 . https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md
