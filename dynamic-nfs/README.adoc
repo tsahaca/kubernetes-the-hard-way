@@ -13,6 +13,7 @@
 /srv/kubernetes/   192.168.59.0/24(rw,no_root_squash, no_subtree_check,insecure)
 
 sometimes due to NAT actual client IP is not sent to the server, so use *
+
 /srv/kubernetes/   *(rw,no_root_squash, no_subtree_check,insecure)
  
  . Export the NFS Share directory
@@ -21,6 +22,15 @@ sometimes due to NAT actual client IP is not sent to the server, so use *
  
  sudo systemctl restart nfs-kernel-server
 
+Allow NFS Access through the Firewall
+For the client to access the NFS share, you need to allow access through the firewall otherwise, accessing and mounting the shared directory will be impossible. To achieve this run the command:
+
+ sudo ufw allow from 192.168.43.0/24 to any port nfs
+ 
+ Reload or enable the firewall (if it was turned off) and check the status of the firewall. Port 2049, which is the default file share, should be opened.
+
+$ sudo ufw enable
+$ sudo ufw status
 
 . https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/blob/master/charts/nfs-subdir-external-provisioner/README.md
 
