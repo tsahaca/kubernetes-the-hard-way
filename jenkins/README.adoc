@@ -1,7 +1,9 @@
 == Install Jenkins Uisng Helm
 
-$ helm repo add jenkinsci https://charts.jenkins.io
-$ helm repo update
+. helm repo add jenkinsci https://charts.jenkins.io
+. helm repo update
+
 The helm charts in the Jenkins repo can be listed with the command:
 
-$ helm search repo jenkinsci
+[start=3]
+. helm search repo jenkinsci
