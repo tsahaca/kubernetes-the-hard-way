@@ -9,4 +9,4 @@ The helm charts in the Jenkins repo can be listed with the command:
 . helm search repo jenkinsci
 . Edit the jenkins-values.yaml filr for you need. I am using ingress to access the Jenkins Admin UI
 . PVC must be created befor hand to enable persistence
-. helm install cd-jenkins -n jenkins --values jenkins-values.yaml --set adminPassword=MySecretPwd jenkinsci/jenkins
+. helm install cd-jenkins -n jenkins --values jenkins-values.yaml --set controller.adminPassword=MySecretPwd jenkinsci/jenkins
