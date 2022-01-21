@@ -7,6 +7,14 @@ The helm charts in the Jenkins repo can be listed with the command:
 
 [start=3]
 . helm search repo jenkinsci
-. Edit the jenkins-values.yaml filr for you need. I am using ingress to access the Jenkins Admin UI
+. Edit the jenkins-values.yaml file for your need. I am using ingress to access the Jenkins Admin UI
+. kubectl create ns jenkins
 . PVC must be created befor hand to enable persistence
+. kubectl apply -f jenkins-pvc.yaml
 . helm install cd-jenkins -n jenkins --values jenkins-values.yaml --set controller.adminPassword=MySecretPwd jenkinsci/jenkins
+. 
+
+
+. To search the RoleBinding and ClusterRoleBinding for service account jenkins-agent execute the following command
+
+kubectl get rolebindings,clusterrolebindings --all-namespaces -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep "jenkins-agent"
