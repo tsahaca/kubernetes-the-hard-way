@@ -12,7 +12,8 @@
 . PVC must be created befor hand to enable persistence
 . kubectl apply -f jenkins-pvc.yaml
 . helm install cd-jenkins -n jenkins --values jenkins-values.yaml --set controller.adminPassword=MySecretPwd jenkinsci/jenkins
-. 
+
+IMPORTANT: Kubernetes Pod as Jenkins Build Agent
 
 
 . To search the RoleBinding and ClusterRoleBinding for service account jenkins-agent execute the following command
