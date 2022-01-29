@@ -1,10 +1,12 @@
 == Install Jenkins Using Helm
 :icons: font
-:iconfont-cdn: http://fortawesome.github.io/Font-Awesome/icons/ 
 
-icon:comment[4x] This is a comment icon
- 
+icon:comment[] This is a comment icon
+
 icon:file[] And a file icon
+
+icon:battery-full[] And a battery icon
+
 
 . helm repo add jenkinsci https://charts.jenkins.io
 . helm repo update
@@ -21,7 +23,7 @@ icon:file[] And a file icon
 
 
 
-icon:important[] Kubernetes Pod as Jenkins Build Agent
+important: Kubernetes Pod as Jenkins Build Agent
 
 
 . To search the RoleBinding and ClusterRoleBinding for service account jenkins-agent execute the following command
