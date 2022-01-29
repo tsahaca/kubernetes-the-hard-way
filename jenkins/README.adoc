@@ -1,12 +1,4 @@
 == Install Jenkins Using Helm
-:icons: font
-
-icon:comment[] This is a comment icon
-
-icon:file[] And a file icon
-
-icon:battery-full[] And a battery icon
-
 
 . helm repo add jenkinsci https://charts.jenkins.io
 . helm repo update
@@ -23,7 +15,8 @@ icon:battery-full[] And a battery icon
 
 
 
-important: Kubernetes Pod as Jenkins Build Agent
+NOTE: Kubernetes Pod as Jenkins Build Agent. By defauly these pods are launched with default service account from its namespace. The default service account has no ClusterRole 
+to deploy application into k8. So we have to follow these steps to give required permissions to these Build Agent Pods to deploy application into k8
 
 
 . To search the RoleBinding and ClusterRoleBinding for service account jenkins-agent execute the following command
