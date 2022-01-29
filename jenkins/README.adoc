@@ -1,5 +1,6 @@
 == Install Jenkins Using Helm
 :icons: font
+:iconfont-cdn: http://fortawesome.github.io/Font-Awesome/icons/ 
 
 icon:comment[4x] This is a comment icon
  
