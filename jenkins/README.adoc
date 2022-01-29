@@ -3,7 +3,7 @@
 . helm repo add jenkinsci https://charts.jenkins.io
 . helm repo update
 
-The helm charts in the Jenkins repo can be listed with the command:
+  The helm charts in the Jenkins repo can be listed with the command:
 
 [start=3]
 . helm search repo jenkinsci
