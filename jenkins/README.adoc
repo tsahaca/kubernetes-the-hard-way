@@ -19,12 +19,14 @@ NOTE: By defauly these pods are launched with default service account from its n
 to deploy application into k8s. So we have to follow these steps to give required permissions to these Build Agent Pods to deploy application into k8s.
 In local dev/test for quick testing you can grant cluster-admin role to serviceaccount=jenkins:default as
 
+[start=9]
 . kubectl create clusterrolebinding jenkins-sa-default  --clusterrole cluster-admin --serviceaccount=jenkins:default
 
 But this will grant excessive permissions to serviceaccount=jenkins:default.
 
 The preferred way to do this
 
+[start=10]
 . create a ServiceAccount jenkins-agent in jenkins namespace
 . create a ClusterRole jenkins-agent-ClusterRole using the file jenkins-agent-ClusterRole.yaml
 . Now create a ClusterRoleBinding  jenkins-agent-ClusterRoleBinding using the ServiceAccount jenkins-agent and jenkins-agent-ClusterRole
