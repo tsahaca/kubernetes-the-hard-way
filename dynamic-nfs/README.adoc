@@ -4,7 +4,7 @@
 . Choose a VM to install the NFS Server
 . sudo apt install nfs-kernel-server
 . create a folder for NFS Server to store data
-. sudo mkdir /srv/kubernetes/volume
+. sudo mkdir -p /srv/kubernetes/volume
 . change the ownership to nobody:nogroup
 . sudo chown -R nobody:nogroup /srv/kubernetes/
 . sudo chmod -R 777 /srv/kubernetes/
