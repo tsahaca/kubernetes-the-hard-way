@@ -4,5 +4,5 @@ metadata:
   name: cd-jenkins-deployment-role
 rules:
 - apiGroups: ["", "extensions", "apps", "networking.k8s.io"]
-  resources: ["namespaces", "deployments", "replicasets", "pods", "services", "ingresses"]
+  resources: ["secrets","namespaces", "deployments", "replicasets", "pods", "services", "ingresses"]
   verbs: ["create", "delete", "get", "list", "patch", "update", "watch"] # You can also use ["*"]
