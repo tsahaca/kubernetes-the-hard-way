@@ -27,13 +27,13 @@ But this will grant excessive permissions to serviceaccount=jenkins:default.
 The preferred way to do this
 
 [start=10]
-. create a ServiceAccount jenkins-agent in jenkins namespace
-. create a ClusterRole jenkins-agent-ClusterRole using the file jenkins-agent-ClusterRole.yaml
-. Now create a ClusterRoleBinding  jenkins-agent-ClusterRoleBinding using the ServiceAccount jenkins-agent and jenkins-agent-ClusterRole
-. kubectl create clusterrolebinding jenkins-agent-ClusterRoleBinding  --clusterrole jenkins-agent-ClusterRole --serviceaccount=jenkins:jenkins-agent
+. create a ServiceAccount jenkins-agent in jenkins namespace ( the ServiceAccount=cd-jenkins created by helm deployment of jenkins )
+. create a ClusterRole using the file cd-jenkins-deployment-role.yaml
+. Now create a ClusterRoleBinding  cd-jenkins-ClusterRoleBinding using the ServiceAccount cd-jenkins and cd-jenkins-deployment-role
+. kubectl create clusterrolebinding cd-jenkins-ClusterRoleBinding  --clusterrole cd-jenkins-deployment-role --serviceaccount=jenkins:cd-jenkins
 
 
 
 . To search the RoleBinding and ClusterRoleBinding for service account jenkins-agent execute the following command
 
-kubectl get rolebindings,clusterrolebindings --all-namespaces -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep "jenkins-agent"
+kubectl get rolebindings,clusterrolebindings --all-namespaces -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind=="ServiceAccount")].name' | grep "cd-jenkins"
