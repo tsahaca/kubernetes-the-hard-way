@@ -44,3 +44,7 @@ $ sudo ufw status
 
 . helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner  --values nfs-provisioner-values.yaml -n nfs-system --create-namespace
 
+. helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+    --set nfs.server=172.16.16.100 \
+    --set nfs.path=/srv/kubernetes/volume
+
