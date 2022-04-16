@@ -1,2 +1,3 @@
-[Provisioning Kubernetes clusters on AWS with Terraform and EKS]https://learnk8s.io/terraform-eks
-[How AWS Load Balancer controller works]https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/how-it-works/
+[Provisioning Kubernetes clusters on AWS with Terraform and EKS](https://learnk8s.io/terraform-eks)
+
+[How AWS Load Balancer controller works](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/how-it-works/)
