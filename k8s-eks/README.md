@@ -2,3 +2,5 @@
 - [How AWS Load Balancer controller works](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/how-it-works/)
 - [Load Balancer Controller Installation](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/deploy/installation/)
 - [Amazon EKS with OIDC provider, IAM Roles for Kubernetes services accounts](https://marcincuber.medium.com/amazon-eks-with-oidc-provider-iam-roles-for-kubernetes-services-accounts-59015d15cb0c)
+- [OIDC issuer discovery for Kubernetes service accounts](https://banzaicloud.com/blog/kubernetes-oidc/)
+- [Implementing RBAC for pods using IAM Roles for Service Accounts](https://blogs.halodoc.io/iam-roles-for-service-accounts-2/)
